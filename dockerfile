@@ -4,6 +4,7 @@ MAINTAINER Jack Skrable "https://github.com/jskrable"
 RUN apt-get update -y 
  # && apt-get upgrade -y 
 
+# TODO fix the python PATH
 RUN apt-get install python3 python3-pip curl unzip openjdk-8-jre -y
 RUN echo 'alias python="python3"' >> .bashrc
 RUN echo 'alias pip="pip3"' >> .bashrc
@@ -24,3 +25,5 @@ RUN gpg --import KEYS
 RUN gpg --verify hadoop.asc hadoop-3.1.2.tar.gz
 RUN tar -xvzf hadoop-3.1.2.tar.gz -C /opt
 RUN rm KEYS
+
+# TODO fix the ENV variables and symbolic links
