@@ -1,3 +1,6 @@
+# TO BUILD:
+# docker build . -t test -f dockerfile
+
 FROM ubuntu:latest
 MAINTAINER Jack Skrable "https://github.com/jskrable"
 
